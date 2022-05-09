@@ -27,10 +27,10 @@ public class ArquivoDAO {
         return inputText.toString();
     }
     
-    public static void writeToExitFile(String fileName,StringBuilder outputText) throws Exception {
+    public static void writeToExitFile(String fileName,String outputText) throws Exception {
         File file = new File(fileName);
         try ( BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-            writer.write(outputText.toString());
+            writer.write(outputText);
         }
     }
 }
